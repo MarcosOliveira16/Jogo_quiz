@@ -4,3 +4,4 @@ Este pequeno projeto busca ser um simples jogo do tipo "Quiz" (perguntas e respo
 - Conhecimentos básicos/intermediários
 - Destaque: sistema de guardar o progresso na mesma ou em diferentes execuções implementado.
 - Roda no terminal
+- Banco de perguntas contém 40 questões e suas respectivas respostas
