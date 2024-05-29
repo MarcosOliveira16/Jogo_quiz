@@ -6,85 +6,43 @@ Este pequeno projeto busca ser um simples jogo do tipo "Quiz" (perguntas e respo
 - Roda no terminal
 - Banco de perguntas contém 40 questões e suas respectivas respostas
 
+Claro, vou elaborar uma documentação básica para o seu jogo quiz em estilo Markdown, explicando a metodologia utilizada e fornecendo uma visão geral do funcionamento do código:
 
-Claro! Abaixo está a documentação elaborada em estilo Markdown para o código fornecido:
-
-```markdown
-# Documentação do Jogo de Quiz
+# Documentação - Jogo Quiz
 
 ## Introdução
+Este documento fornece uma visão geral do código-fonte de um jogo quiz implementado em Python. O jogo consiste em apresentar uma série de perguntas ao jogador, que deve fornecer respostas corretas para acumular pontos. O código é estruturado em classes e funções para garantir modularidade e facilidade de manutenção.
 
-Este documento descreve a metodologia e a estrutura do código para um jogo de quiz desenvolvido em Python. O jogo permite que os usuários joguem um quiz interativo, importem/exportem rankings, e limpem o histórico do jogador.
+## Metodologia
+O jogo foi desenvolvido utilizando a linguagem de programação Python e segue uma abordagem procedural. Foram utilizadas as seguintes técnicas e conceitos:
 
-## Funcionalidades
+### Estrutura de Classes
+- **Classe `Jogador`:** Representa o jogador do jogo, armazenando seu nome e pontuação.
+- **Classe `Jogo`:** Contém métodos para gerenciar o jogo, como apresentar perguntas, verificar respostas e atualizar o ranking.
 
-### Funções Globais
+### Funcionalidades
+- **Cadastro de Jogadores:** Permite que o jogador cadastre seu nome antes de iniciar o jogo.
+- **Apresentação de Perguntas:** Seleciona aleatoriamente perguntas de um conjunto pré-definido e exibe-as ao jogador.
+- **Verificação de Respostas:** Verifica se a resposta fornecida pelo jogador está correta e atualiza sua pontuação.
+- **Exportação e Importação de Rankings:** Permite exportar o ranking atual para um arquivo de texto e importar rankings previamente salvos.
 
-#### `limpa_tela()`
-- Limpa a tela do terminal ou tela de exibição do código.
+### Fluxo de Execução
+1. O jogo é iniciado e apresenta um menu com várias opções.
+2. O jogador pode escolher entre iniciar o jogo, importar/exportar rankings, exibir o ranking atual ou sair do jogo.
+3. Se o jogador optar por iniciar o jogo, ele será solicitado a cadastrar seu nome.
+4. Após o cadastro, o jogo exibe perguntas ao jogador e verifica suas respostas.
+5. O jogo continua até que todas as perguntas sejam respondidas ou o jogador decida sair.
+6. Ao final do jogo, o jogador tem a opção de exportar seu ranking ou voltar ao menu principal.
 
-#### `menu()`
-- Exibe o menu principal do jogo, mostrando as opções disponíveis.
+### Manipulação de Arquivos
+- As informações do progresso do jogador e do ranking são armazenadas em arquivos de texto (`Progresso.txt` e `Ranking.txt`, respectivamente).
+- Os arquivos são lidos e gravados utilizando operações de leitura e escrita de arquivos em Python.
 
-#### `boas_vindas()`
-- Exibe uma mensagem de boas-vindas ao usuário quando o jogo é iniciado.
+## Execução
+Para executar o jogo, basta rodar o arquivo Python `quiz.py`. Certifique-se de ter o Python instalado em seu sistema.
 
-#### `despedida()`
-- Exibe uma mensagem de despedida e encerra o jogo.
-
-#### `carrega_progresso()`
-- Carrega o progresso do jogador a partir de um arquivo de texto.
-- Remove as perguntas já respondidas da lista de perguntas.
-
-#### `cadastra_players()`
-- Permite que o jogador faça seu cadastro para iniciar o jogo.
-- Permite continuar de onde parou da última vez, se houver progresso salvo.
-
-#### `feedback()`
-- Exibe o resultado da rodada (se o jogador acertou ou errou).
-
-#### `exibe_resposta(resp_jogador, perguntas, id)`
-- Exibe a resposta correta da pergunta e verifica se o jogador acertou.
-- Atualiza os pontos do jogador.
-
-#### `guarda_respostas(perguntas, id)`
-- Recebe a resposta do jogador para a pergunta atual e a processa.
-
-#### `salva_progresso(guarda_perguntas)`
-- Salva o progresso do jogador em um arquivo de texto.
-- Remove as perguntas respondidas da lista de perguntas.
-
-#### `apaga_progresso()`
-- Apaga o arquivo de progresso do jogador.
-
-#### `status_quiz()`
-- Exibe o status do quiz atual, mostrando quantas perguntas foram respondidas e quantos pontos o jogador tem.
-
-#### `exibe_perguntas(perguntas_aux)`
-- Exibe as perguntas do quiz e processa as respostas dos jogadores.
-
-#### `exibe_ranking()`
-- Exibe o ranking atual, mostrando os melhores jogadores e suas pontuações.
-
-#### `exporta_raking()`
-- Exporta o ranking atual para um arquivo de texto na nuvem.
-
-#### `importa_ranking()`
-- Importa o ranking de um arquivo de texto na nuvem.
-
-### Estrutura do Jogo
-
-O jogo segue a seguinte estrutura:
-
-1. **Boas-vindas**: O jogo é iniciado com uma mensagem de boas-vindas.
-2. **Menu Principal**: O usuário pode escolher entre várias opções no menu principal, como iniciar o jogo, importar/exportar rankings, exibir rankings e limpar o histórico do jogador.
-3. **Jogar Quiz**: O usuário pode iniciar o jogo e responder às perguntas do quiz.
-4. **Progresso e Ranking**: O progresso do jogador é salvo e atualizado conforme ele avança no jogo. Os rankings são exibidos e atualizados de acordo com as pontuações dos jogadores.
-5. **Despedida**: O jogo é encerrado com uma mensagem de despedida.
+## Requisitos
+- Python 3.x
 
 ## Conclusão
-
-Este documento fornece uma visão geral da estrutura e funcionalidades do jogo de quiz desenvolvido em Python. Ele oferece uma experiência interativa para os usuários, permitindo que joguem e acompanhem seu progresso ao longo do tempo.
-```
-
-Esse documento pode ser salvo em um arquivo README.md dentro do diretório do projeto para fornecer uma referência útil sobre o funcionamento do jogo.
+O jogo quiz implementado em Python oferece uma experiência interativa e divertida para os jogadores. Sua estrutura modular e funcionalidades bem definidas permitem fácil manutenção e extensão. Este documento fornece uma visão geral do código-fonte e da metodologia utilizada, permitindo uma compreensão clara do funcionamento do jogo.
